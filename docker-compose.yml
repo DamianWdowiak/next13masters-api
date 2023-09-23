@@ -2,7 +2,9 @@ version: "3"
 services:
   strapi:
     container_name: strapi
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.${NODE_ENV}
     image: next13masters-api:latest
     restart: unless-stopped
     env_file: .env
