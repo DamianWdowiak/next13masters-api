@@ -17,7 +17,8 @@
       "required": true
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "price": {
       "type": "float",
@@ -41,6 +42,12 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "products"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "products"
     }
   }
 }
