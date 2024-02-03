@@ -48,6 +48,17 @@
       "relation": "manyToOne",
       "target": "api::collection.collection",
       "inversedBy": "products"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "product"
+    },
+    "averageRating": {
+      "type": "float",
+      "required": false,
+      "default": 0
     }
   }
 }
